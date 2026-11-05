@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>瓷时 · Porcelain Time</title>
+<meta name="description" content="输入你的生日，邂逅一件中国陶瓷，读它背后的故事。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./result.css">
+<!-- eazo-platform-head:start -->
+<script src="https://cdn.eazo.ai/platform-assets/inspector.js" defer></script>
+<script defer src="https://cdn.eazo.ai/branding/eazo-brand-banner.js" data-eazo-app-id="i2A9Nbo4BPnDgx7Z"></script>
+<!-- eazo-platform-head:end -->
+</head>
+<body>
+<main>
+  <section class="home view" id="home">
+    <div class="atmos" aria-hidden="true"></div>
+    <header class="topline">
+      <span class="seal">瓷时</span>
+      <span class="edition" data-i18n="home.edition">A JOURNEY THROUGH CERAMIC TIME</span>
+      <select class="lang" data-i18n-locale-select aria-label="Language">
+        <option value="system" data-i18n="lang.system">Auto</option>
+        <option value="zh-CN">中文</option>
+        <option value="en-US">English</option>
+      </select>
+    </header>
+
+    <div class="hero">
+      <p class="eyebrow" data-i18n="home.eyebrow">Porcelain time</p>
+      <h1 data-i18n="home.title">瓷时</h1>
+      <p class="latin">Porcelain Time</p>
+      <p class="motto" data-i18n="home.motto">Your birthday has a story in porcelain.</p>
+      <div class="vase-home" aria-hidden="true">
+        <img src="./assets/hero-vase.webp" alt="">
+      </div>
+    </div>
+
+    <form class="control" id="birthday-form" novalidate>
+      <p class="control-label" data-i18n="home.formLabel">Your birthday · 你的生日</p>
+      <div class="selectors">
+        <label class="select-wrap">
+          <span class="sr-only" data-i18n="home.month">Month</span>
+          <select id="month" aria-label="Month"></select>
+        </label>
+        <label class="select-wrap">
+          <span class="sr-only" data-i18n="home.day">Day</span>
+          <select id="day" aria-label="Day"></select>
+        </label>
+      </div>
+      <button class="discover" type="submit">
+        <span data-i18n="home.discover">Discover My Porcelain</span>
+        <em aria-hidden="true">→</em>
+      </button>
+      <p class="intro" data-i18n="home.intro">输入你的生日，探索历史长河中与你的生日相遇的一件中国陶瓷作品。</p>
+    </form>
+
+    <footer class="bottomline">
+      <span><i></i>JINGDEZHEN · CHINA</span>
+      <span data-i18n="home.footer">Twenty works, two thousand years</span>
+    </footer>
+  </section>
+
+  <section class="result view" id="result" hidden>
+    <div class="result-shell">
+      <header class="result-nav">
+        <button class="brand" type="button" id="brand-home">
+          瓷时 <span>Porcelain Time</span>
+        </button>
+        <span class="chapter" id="chapter">A BIRTHDAY ENCOUNTER / 01</span>
+      </header>
+
+      <div class="exhibit">
+        <div class="art-stage" id="art-stage">
+          <span class="art-mark" id="art-mark">PORCELAIN · 景德镇</span>
+          <div class="halo" aria-hidden="true"></div>
+          <div class="plate">
+            <img id="art-image" alt="" src="">
+          </div>
+          <div class="art-foot">
+            <span id="art-foot-left">—</span>
+            <span id="art-foot-right">FIRE &amp; TIME</span>
+          </div>
+        </div>
+
+        <article class="story">
+          <p class="index" data-i18n="result.index">01 / Your porcelain story</p>
+          <p class="birthday" id="birthday-display">06.18</p>
+          <h2 id="art-name">—</h2>
+          <p class="subtitle" id="art-name-en"></p>
+
+          <div class="meta">
+            <div>
+              <small data-i18n="result.period">Historical period</small>
+              <strong id="art-period">—</strong>
+            </div>
+            <div>
+              <small data-i18n="result.kiln">Kiln / Origin</small>
+              <strong id="art-kiln">—</strong>
+            </div>
+          </div>
+
+          <section class="story-section">
+            <span class="section-label" data-i18n="result.story">01 / 历史故事</span>
+            <p class="storycopy" id="art-story"></p>
+          </section>
+
+          <section class="story-section">
+            <span class="section-label" data-i18n="result.craft">02 / 工艺之美</span>
+            <p class="storycopy" id="art-craft"></p>
+          </section>
+
+          <div class="connection">
+            <span class="section-label" id="connection-label">03 / 与你的生日相遇</span>
+            <p id="connection-text"></p>
+            <p class="connection-tag" id="connection-tag"></p>
+          </div>
+
+          <div class="actions">
+            <button class="secondary" id="again" type="button" data-i18n="result.again">Discover another</button>
+            <button class="primary" id="share" type="button" data-i18n="result.share">Share my porcelain</button>
+          </div>
+          <p class="picture-note" id="picture-note"></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="transition" id="transition" hidden aria-hidden="true"><span></span></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script src="./i18n.js" defer></script>
+<script src="./js/data.js" defer></script>
+<script src="./js/events.js" defer></script>
+<script src="./js/match.js" defer></script>
+<script src="./share.js" defer></script>
+<script src="./app.js" defer></script>
+</body>
+</html>
